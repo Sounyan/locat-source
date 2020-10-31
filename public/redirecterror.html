@@ -22,7 +22,7 @@
     ></script>
   </head>
   
-  <body x-data="process()">
+  <body>
     <nav class="fix">
     <div class="nav-wrapper pink">
       <a href="#!" class="brand-logo">Locat.ml</a>
@@ -68,75 +68,7 @@
     </div>
     </div>
     </div>
-    <footer class="page-footer pink">
-          <div class="footer-copyright">
-      <div class="container">
-      <center>©<a class="pink-text text-lighten-3" href="#">Lovely Cat Project</a></center>
-      </div>
-    </div>
-      </footer>
 </center>
-    <script>
-      function process() {
-        return {
-          error: "",
-          data: {},
-          url: "",
-          slug: "",
-          shortenURL: async function () {
-            try {
-              console.log("this.url", this.url);
-              const result = await fetch(`/new/`, {
-                method: "POST",
-
-                headers: {
-                  Accept: "application/json",
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ url: this.url, slug: this.slug }),
-              });
-
-              const resJson = await result.json();
-              console.log("resJson: ", resJson);
-
-              if (result.ok) {
-                console.log("result.ok: ", result.ok);
-
-                this.data = resJson;
-                this.error = "";
-              } else {
-                console.log("in error");
-                this.data = {};
-                this.error = resJson["message"];
-              }
-              console.log("data: ", this.data);
-              console.log("error: ", this.error);
-            } catch (e) {
-              console.log("error", e);
-              this.error = e.message;
-            }
-          },
-        };
-      }
-      function copy() {
-
-
-var text = document.getElementsByTagName("textarea")[0];
-
-text.select();
-document.execCommand("copy");
-
-}
-$(window).load(function () {
-    // 消えるタイミングはお好みで
-    $('.loading').delay(1500).fadeOut(300);
-});
-// 10秒待っても読み込みが終わらない時は強制的にローディング画面をフェードアウト
-function stopload(){
-    $('.loading').delay(1000).fadeOut(700);
-}
-setTimeout('stopload()',10000);
-    </script>
       <script src="https://new.ad-center.ml/js/materialize.js"></script>
   <script src="https://new.ad-center.ml/js/init.js"></script>
   </body>
