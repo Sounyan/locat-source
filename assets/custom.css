@@ -1,1 +1,167 @@
 
+/* Custom Stylesheet */
+/**
+ * Use this file to override Materialize files so you can update
+ * the core Materialize files in the future
+ *
+ * Made By MaterializeCSS.com
+ */
+ .error {
+  color: red;
+  padding-top: 1em;
+  padding-right: 1em;
+}
+.input-group {
+  padding-top: 2em;
+  padding-bottom: 2em;
+  text-align: center;
+  margin: auto;
+  background-color: whitesmoke;
+}
+
+.results {
+  text-align: center;
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+ .loading {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  top: 0px;
+  left: 0px;
+  background: #ADA1F7;
+  z-index: 9999;
+  overflow: hidden;
+}
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1, .double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #fff;
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
+  animation: sk-bounce 2.0s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1.0s;
+  animation-delay: -1.0s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%, 100% { -webkit-transform: scale(0.0) }
+  50% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bounce {
+  0%, 100% { 
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% { 
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}
+.animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  color: #fff;
+  -webkit-animation: lodanimetion 1500ms ease-out forwards infinite;
+  animation: lodanimetion 1500ms ease-out forwards infinite;
+}
+
+@-webkit-keyframes lodanimetion {
+  from,to {
+    opacity: 0;
+  }
+  50% {
+    opacity: .5;
+  }
+}
+ 
+#page_top {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+}
+#page_top:hover {
+  animation: fadeOut 1.0s;
+}
+@font-face {
+  font-family: "MyFont";
+  src: url(https://cdn.glitch.com/177a10ef-db56-48ec-9543-5acb6b1d4fd2%2FMPLUSRounded1c-Medium.ttf?v=1601089176221);
+}
+body {
+	font-family: MyFont ;
+}
+input {
+    border: 2px solid #fff;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    width: 100%;             /* 横幅いっぱいにする */
+    box-sizing: border-box;  /* ※これがないと横にはみ出る */
+    height: 60px;           /* 高さ */
+    font-size: 1em;          /* 文字サイズ */
+    font-family: MyFont;      /*文字フォント*/
+    line-height: 1.2;  /* 行の高さ */
+    transition: .3s;
+    text-align: center;
+
+}
+textarea {
+    border: 2px solid #ffffff;  /* 枠線 */
+    border-radius: 0.67em;   /* 角丸 */
+    padding: 0.5em;          /* 内側の余白量 */
+    background-color: snow;  /* 背景色 */
+    width: 100%;             /* 横幅いっぱいにする */
+    box-sizing: border-box;  /* ※これがないと横にはみ出る */
+    height: 60px;           /* 高さ */
+    font-size: 1em;          /* 文字サイズ */
+    font-family: MyFont;      /*文字フォント*/
+    line-height: 1.2;  /* 行の高さ */
+    transition: .3s;
+    text-align: center;
+
+}
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+
+.fade{
+
+  animation: fadeIn 1.0s;
+
+}
+
+@keyframes fadeIn { /*animetion-nameで設定した値を書く*/
+
+  0% {opacity: 0} /*アニメーション開始時は不透明度0%*/
+
+  100% {opacity: 1} /*アニメーション終了時は不透明度100%*/
+
+}
+
+.fix{
+       position: fixed;/*固定する*/
+  top:0;
+  }
