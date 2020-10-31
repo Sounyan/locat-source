@@ -1,7 +1,7 @@
 {
-  "name": "shortu",
+  "name": "locat",
   "version": "1.0.0",
-  "description": "Shortu URL shortener",
+  "description": "Short URL Generator - Locat",
   "main": "index.js",
   "scripts": {
     "run": "node server",
@@ -11,7 +11,7 @@
   "keywords": [
     "short-url"
   ],
-  "author": "techformist",
+  "author": "Lovely Cat",
   "license": "MIT",
   "dependencies": {
     "cors": "^2.8.5",
