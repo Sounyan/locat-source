@@ -1,0 +1,28 @@
+{
+  "name": "shortu",
+  "version": "1.0.0",
+  "description": "Shortu URL shortener",
+  "main": "index.js",
+  "scripts": {
+    "run": "node server",
+    "dev": "nodemon server",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "short-url"
+  ],
+  "author": "techformist",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crypto-random-string": "^3.2.0",
+    "express": "^4.17.1",
+    "helmet": "^3.22.1",
+    "md5": "^2.2.1",
+    "sqlite3": "^4.2.0",
+    "yup": "^0.29.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.4"
+  }
+}
