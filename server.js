@@ -104,7 +104,7 @@ app.get('/list', (req, res) => {
 app.get('/:id', (req, res) => {
 	db.get(`SELECT * FROM urls where slug='${req.params.id}'`, (err, data) => {
 		if (err) console.error(err);
-		if (!data) res.send(`/?error=${req.params.id} not found!`);
+		if (!data) res.sendFile("redirecterror.html");
 		else res.redirect(data.url);
 
 		// add clicks
