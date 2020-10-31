@@ -12,64 +12,35 @@
 <meta property="og:image" content="https://cdn.discordapp.com/icons/706748716077547600/6549d16556ee5674fd44a65ea76812c8.png?size=1024">
 <meta name="theme-color" content="#F514EA">
     <title>短縮URL - locat.ml(β)</title>
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/mvp.css" />
     <link rel="stylesheet" href="./assets/custom.css" />
-     <link href="https://new.ad-center.ml/css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
-    <script
-      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
-      defer
-    ></script>
+       <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link href="css/materialize.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+  <link href="css/style.css" type="text/css" rel="stylesheet" media="screen,projection"/>
+    
   </head>
   
-  <body>
+  <body x-data="process()">
     <nav class="fix">
     <div class="nav-wrapper pink">
       <a href="#!" class="brand-logo">Locat.ml</a>
     </div>
   </nav>
   <br><br>
-    <center><h1 class="title">locat.ml(β)</h1>
-    <div class="subtitle">
-      短縮URLを作成して、あなたの長いURLを短縮化しましょう。このサービスは予告なく停止される場合がございますのでご了承下さい。
-    </div>
+<center>
   <div class="row">
       <div class="col s60 m12">
       <div class="center pink lighten-3 card-panel hoverable white-text">
-<i class="material-icons large">attachment</i>
-      <input type="text" placeholder="短縮したいURLを入力" x-model="url" />
-      <br />
-      <input
-        type="text"
-        class="form-control"
-        placeholder="短縮URLのワードを入力(任意)"
-        x-model="slug"
-      />
-      <button class="btn purple lighten-3 waves-effect" x-on:click.prevent="shortenURL()">短縮化</button>
-      <div x-show="error" x-on:click=" error = ''">
-        <span x-text="error" class="error"></span>❌
-      </div>
-    
+<i class="material-icons large">error</i>
+<h1>エラーです!/h1>
+<p>そのリダイレクトリンクは削除されたか元々存在しません。</p>
     </div></div></div>
-        <div id="results" x-show="data['shorturl']" class="results">
-  <div class="row">
-      <div class="col s60 m12">
-      <div class="center pink lighten-3 card-panel hoverable white-text" >
-<i class="material-icons large">verified</i>
-      <div class="label">短縮化されたURL:</div>
-      <textarea rows="1" cols="30" style="display: inline-block;" x-text="data.shorturl"></textarea>
-      
-      <br><br>
-
-<button class="btn purple lighten-3 waves-effect" onclick = "copy()">
-コピー
-</button>
-    </div>
-    </div>
-    </div>
-    </div>
 </center>
-      <script src="https://new.ad-center.ml/js/materialize.js"></script>
-  <script src="https://new.ad-center.ml/js/init.js"></script>
+  <script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="js/materialize.js"></script>
+  <script src="js/init.js"></script>
+  <script
+      src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js"
+      defer
+    ></script>
   </body>
 </html>
